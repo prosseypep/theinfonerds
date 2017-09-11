@@ -4,22 +4,29 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Editorials</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Editorials</ion-title>
+  </ion-navbar>
+</ion-header>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
 
-</ion-menu>
+<ion-content class="editorials">
+  <ion-list>
+    <ion-card ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+	 <img [src] ="item._embedded['wp:featuredmedia'][0].source_url"/>
+	  <ion-card-content>
+	  	  <ion-title>
+		    <h2 [innerHTML]="item.title.rendered"></h2>
+		  </ion-title>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+		    <p [innerHTML]="item.excerpt.rendered"></p>
+
+	  </ion-card-content>
+    </ion-card>
+    
+  </ion-list>
+</ion-content>
