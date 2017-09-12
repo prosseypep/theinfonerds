@@ -4,6 +4,8 @@ import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { SocialSharing } from '@ionic-native/social-sharing';
+
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -16,6 +18,8 @@ import { EventsPage } from '../pages/events/events';
 import { EditorialsPage } from '../pages/editorials/editorials';
 import { HealthPage } from '../pages/health/health';
 import { FashionPage } from '../pages/fashion/fashion';
+import { PostDetailsPage } from '../pages/post-details/post-details';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,8 @@ import { FashionPage } from '../pages/fashion/fashion';
     EventsPage,
     EditorialsPage,
     HealthPage,
-    FashionPage
+    FashionPage,
+    PostDetailsPage
   ],
   imports: [
     BrowserModule,
@@ -48,10 +53,12 @@ import { FashionPage } from '../pages/fashion/fashion';
     EventsPage,
     EditorialsPage,
     HealthPage,
-    FashionPage
+    FashionPage,
+    PostDetailsPage
   ],
   providers: [
     StatusBar,
+    SocialSharing,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

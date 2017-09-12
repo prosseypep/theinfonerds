@@ -41,8 +41,9 @@ $colors: (
   dark:       #222
 );
 
-$background-color: #444C5C;
-
+$background-color: #2A3132;
+$card-background-color: white;
+$text-color: white;
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -87,3 +88,8 @@ $background-color: #444C5C;
 
 @import "roboto";
 @import "noto-sans";
+@font-face {
+    font-family: circularBook;
+    src: url(../assets/fonts/lineto-circular-pro-book.woff);
+}
+

@@ -16,7 +16,7 @@
 
 <ion-content class="videos">
   <ion-list>
-    <ion-card ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+    <ion-card ion-item *ngFor="let item of items" (click)="itemTapped($event, item)" class="card-item">
 	 <img [src] ="item._embedded['wp:featuredmedia'][0].source_url"/>
 	  <ion-card-content>
 	  	  <ion-title>
