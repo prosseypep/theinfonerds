@@ -17,6 +17,7 @@
     <h2 [innerHTML]="selectedItem.title.rendered"></h2>
     <img [src] ="selectedItem._embedded['wp:featuredmedia'][0].source_url"/>
     <div class="post-body" [innerHTML]="selectedItem.content.rendered"></div>
+    <p text-right>{{date_post}}</p>
  </div>
 
 	<div text-center>
@@ -24,4 +25,6 @@
       <button ion-button icon-only class="share" (click)="whatsappShare()"><ion-icon name="logo-whatsapp"></ion-icon></button>
       <button ion-button icon-only class="share" (click)="facebookShare()"><ion-icon name="logo-facebook"></ion-icon></button>
  	</div>
+
+
 </ion-content>

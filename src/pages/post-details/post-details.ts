@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
+import * as moment from 'moment';
 /**
  * Generated class for the PostDetailsPage page.
  *
@@ -17,12 +18,13 @@ import 'rxjs/add/operator/map';
 export class PostDetailsPage {
 
   selectedItem: any;
- 
-
+  date_post: any;
+  
   constructor(public http: Http, public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing) {
   
   	this.selectedItem = navParams.get('item');
-  	
+  	this.date_post = moment(this.selectedItem.date, moment.ISO_8601).format('LLLL');
+
   }
 
   smsShare() {
