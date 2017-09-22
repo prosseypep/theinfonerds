@@ -3,14 +3,13 @@ import { NavController, LoadingController } from 'ionic-angular';
 import { PostDetailsPage } from '../post-details/post-details';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
-import * as moment from 'moment';
 
 @Component({
   templateUrl: 'home.html'
 })
 export class HomePage {
 	url: string = 'http://www.theinfonerds.com/wp-json/wp/v2/posts?_embed';
-	items: any = [];
+	items: any;
 	
 	constructor( private http: Http, public navCtrl: NavController, private nav: NavController, public loadingCtrl: LoadingController ) {
 		

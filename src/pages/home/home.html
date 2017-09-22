@@ -10,13 +10,13 @@
 
 <ion-content class="home">
   <ion-list>
-    <ion-card ion-item *ngFor="let item of items;i= index;" class="card-item" (click)="itemTapped($event, item)">
-	 <img [src] ="item._embedded['wp:featuredmedia'][0].source_url"/>
-   <hr>
+    <ion-card ion-item *ngFor="let item of items" class="card-item" (click)="itemTapped($event, item)">
+	  <img *ngIf="item._embedded['wp:featuredmedia']" [src] ="item._embedded['wp:featuredmedia'][0].source_url"/>
+    <hr>
 	  <ion-card-content text-wrap class="card-content">
 	  	  <ion-title>
 		    <h2 [innerHTML]="item.title.rendered" text-left text-wrap></h2>
-		  </ion-title>
+		    </ion-title>
 
 		    <p [innerHTML]="item.excerpt.rendered"></p>
         <hr>
