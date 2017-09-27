@@ -1,6 +1,20 @@
-div.post-body {
+div .post-body {
 	font-size: 14px;
 	line-height: 20px;
+}
+
+
+#relatedPosts {
+	margin-top:	30px;
+}
+
+.relatedPost {
+	background-color: white;
+	color: #000;
+	margin-top:	10px;
+	margin-bottom:	10px;
+	padding: 0px 5px;
+	background-clip: content-box;
 }
 
 img {
@@ -11,3 +25,12 @@ img {
 .share {
 	background: transparent;
 }
+
+h6 {
+	font-size:14px;
+}
+
+.Rtitle {
+	padding-top: 20px;
+}
+

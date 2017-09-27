@@ -26,5 +26,30 @@
       <button ion-button icon-only class="share" (click)="facebookShare()"><ion-icon name="logo-facebook"></ion-icon></button>
   </div>
 
+  <div id="relatedPosts">
+    <h5>Related Posts</h5>
+
+    <ion-grid class="relatedPost">
+      <ion-row>
+        <ion-col col-4><img [src] = "selectedItem['jetpack-related-posts'][0].img.src"/></ion-col>
+        <ion-col col-8 class="Rtitle"><h6 [innerHTML]="selectedItem['jetpack-related-posts'][0].title"></h6></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="relatedPost">
+      <ion-row>
+        <ion-col col-4><img [src] = "selectedItem['jetpack-related-posts'][1].img.src"/></ion-col>
+        <ion-col col-8 class="Rtitle"><h6 [innerHTML]="selectedItem['jetpack-related-posts'][1].title"></h6></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="relatedPost">
+      <ion-row>
+        <ion-col col-4><img [src] = "selectedItem['jetpack-related-posts'][2].img.src"/></ion-col>
+        <ion-col col-8 class="Rtitle"><h6 [innerHTML]="selectedItem['jetpack-related-posts'][2].title"></h6></ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
 
 </ion-content>

@@ -5,6 +5,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
 
 
 import { MyApp } from './app.component';
@@ -59,6 +60,7 @@ import { PostDetailsPage } from '../pages/post-details/post-details';
   providers: [
     StatusBar,
     SocialSharing,
+    YoutubeVideoPlayer,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
