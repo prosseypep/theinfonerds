@@ -30,9 +30,9 @@ export class PostDetailsPage {
 
   smsShare() {
     this.socialSharing.shareViaTwitter('this.selectedItem.title.rendered', 'selectedItem._embedded["wp:featuredmedia"][0].source_url', 'this.selectedItem.link').then(() => {
-      console.log("shareViaSMS: Success");
+      console.log("shareViaTwitter: Success");
     }).catch(() => {
-      console.error("shareViaSMS: failed");
+      console.error("shareViaTwitter: failed");
     });
   }
 
