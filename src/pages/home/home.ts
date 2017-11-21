@@ -16,7 +16,7 @@ export class HomePage {
 		
 	}
 
-	ionViewDidEnter() {
+	ionViewDidLoad() {
 		let loading = this.loadingCtrl.create({
 		    content: 'Please wait...'
 		  });
@@ -26,7 +26,15 @@ export class HomePage {
 	    .subscribe(data => {
 	      // we've got back the raw data, now generate the core schedule data
 	      // and save the data for later reference
-	      this.items = data;
+
+	      this.items = data.map(item => {
+	      	item.content.rendered = item.content.rendered.replace(/<(\/?|\!?)(h1)>/g, "");
+	      	item.title.rendered = item.title.rendered.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+	      	return item;
+	      });
+
+	      // console.log(this.items[0].content.rendered)
+	      // console.log(data[0].content.rendered.replace(/<(\/?|\!?)(h1)>/g, ""));
 	    loading.dismiss();
 	    },
 	    err => { loading.dismiss(); 

@@ -14,9 +14,9 @@
 	  <img *ngIf="item._embedded['wp:featuredmedia']" [src] ="item._embedded['wp:featuredmedia'][0].source_url"/>
     <hr>
 	  <ion-card-content text-wrap class="card-content">
-	  	  <ion-title>
+	  	  <ion-card-title>
 		    <h2 [innerHTML]="item.title.rendered" text-left text-wrap></h2>
-		    </ion-title>
+		    </ion-card-title>
 
 		    <p [innerHTML]="item.excerpt.rendered"></p>
         <hr>
