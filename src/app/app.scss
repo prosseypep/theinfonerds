@@ -14,15 +14,8 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
-
-$font-color: white;
 .card-item {
 		background-color: $card-background-color;
-		// margin: 15px 15px;
-
-		img {
-			margin-bottom: 10px;
-		}
 }
 
 .post-body {

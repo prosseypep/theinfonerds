@@ -4,19 +4,29 @@ import { PostDetailsPage } from '../post-details/post-details';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
 
+import { Storage } from '@ionic/storage';
+
 @Component({
+	selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 	url: string = 'http://www.theinfonerds.com/wp-json/wp/v2/posts?_embed';
 	items: any;
 	
-	constructor( private http: Http, public navCtrl: NavController, private nav: NavController, public loadingCtrl: LoadingController ) {
+	constructor( private http: Http, public navCtrl: NavController, private nav: NavController, public loadingCtrl: LoadingController, public storage: Storage ) {
 		
 		
 	}
 
 	ionViewDidLoad() {
+		this.storage.get('home').then(data => {
+			if (data) {
+				this.items = JSON.parse(data);
+				console.log(this.items[0])
+				return;
+			}
+		})
 		let loading = this.loadingCtrl.create({
 		    content: 'Please wait...'
 		  });
@@ -26,25 +36,24 @@ export class HomePage {
 	    .subscribe(data => {
 	      // we've got back the raw data, now generate the core schedule data
 	      // and save the data for later reference
-<<<<<<< HEAD
-				this.items = data;
-				console.log(data);
-=======
 
 	      this.items = data.map(item => {
 	      	item.content.rendered = item.content.rendered.replace(/<(\/?|\!?)(h1)>/g, "");
-	      	item.title.rendered = item.title.rendered.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+					item.title.rendered = item.title.rendered.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+					item.excerpt.rendered = item.excerpt.rendered.replace(/(&nbsp;|<([^>]+)>)/ig, "");
 	      	return item;
-	      });
-
-	      // console.log(this.items[0].content.rendered)
-	      // console.log(data[0].content.rendered.replace(/<(\/?|\!?)(h1)>/g, ""));
->>>>>>> upstream/master
-	    loading.dismiss();
+				});
+				
+				this.storage.set('home', JSON.stringify(this.items));
+	    	loading.dismiss();
 	    },
 	    err => { loading.dismiss(); 
 	    });
 
+	}
+
+	clearData() {
+		this.storage.clear();
 	}
 
 	itemTapped(event, item) {

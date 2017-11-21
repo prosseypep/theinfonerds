@@ -6,6 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player';
+import { IonicStorageModule } from '@ionic/storage';
+
 
 
 import { MyApp } from './app.component';
@@ -40,7 +42,8 @@ import { PostDetailsPage } from '../pages/post-details/post-details';
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
