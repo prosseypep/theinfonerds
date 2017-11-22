@@ -1,18 +1,14 @@
-* {
-	box-sizing: border-box;
+page-home{
+	.home {
+		background-color: grey;
+	}
+
+	.card-item {
+		margin: 10px 0px;
+		width: 100%;
+	}
+
+	img {
+		margin: 0px ;
+	}
 }
-
-
-// .card-item {
-// 		background-color: $card-background-color;
-// 		margin: 15px 15px;
-// }
-
-// .card-content {
-// 	padding: 0px;
-// }
-
-// .card-title {
-// 	padding-left: 0px;
-// 	text-align: center;
-// }

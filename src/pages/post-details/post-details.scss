@@ -1,36 +1,52 @@
-div .post-body {
-	font-size: 14px;
-	line-height: 20px;
-}
+page-post-details {
 
+	.post-details {
+		background-color: white;
+	}
 
-#relatedPosts {
-	margin-top:	30px;
-}
+	.bar-button-default-md {
+		color: white;
+	}
 
-.relatedPost {
-	background-color: white;
-	color: #000;
-	margin-top:	10px;
-	margin-bottom:	10px;
-	padding: 0px 5px;
-	background-clip: content-box;
-}
+	img {
+		margin: 0px;
+		width: 100%;
+	}
 
-img {
-	margin-top: 15px;
-	margin-bottom:15px;
-}
+	.scroll-content {
+		padding: 0px !important;
+	}
+	
 
-.share {
-	background: transparent;
-}
-
-h6 {
-	font-size:14px;
-}
-
-.Rtitle {
-	padding-top: 20px;
+	div .post-body {
+		font-size: 14px;
+		line-height: 20px;
+	}
+	
+	
+	#relatedPosts {
+		margin-top:	30px;
+	}
+	
+	.relatedPost {
+		background-color: white;
+		color: #000;
+		margin-top:	10px;
+		margin-bottom:	10px;
+		padding: 0px 5px;
+		background-clip: content-box;
+	}
+	
+	.share {
+		background: transparent;
+	}
+	
+	h6 {
+		font-size:14px;
+	}
+	
+	.Rtitle {
+		padding-top: 20px;
+	}	
 }
 
