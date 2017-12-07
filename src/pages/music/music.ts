@@ -22,7 +22,7 @@ export class MusicPage {
    constructor( private http: Http, public navCtrl: NavController, private nav: NavController, private loadingCtrl: LoadingController ) {
   }
 
- 	ionViewDidEnter() {
+ 	ionViewDidLoad() {
 		let loading = this.loadingCtrl.create({
 		    content: 'Please wait...'
 		  });
@@ -32,8 +32,13 @@ export class MusicPage {
 	    .subscribe(data => {
 	      // we've got back the raw data, now generate the core schedule data
 	      // and save the data for later reference
-	      this.items = data;
-	    loading.dismiss();
+	       this.items = data.map(item => {
+	      	item.content.rendered = item.content.rendered.replace(/<(\/?|\!?)(h1)>/g, "");
+					item.title.rendered = item.title.rendered.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+					item.excerpt.rendered = item.excerpt.rendered.replace(/(&nbsp;|<([^>]+)>)/ig, "");
+	      	return item;
+				});
+	    	loading.dismiss();
 	    },
 	    err => { loading.dismiss(); 
 	    });

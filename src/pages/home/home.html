@@ -18,7 +18,7 @@
           <h2 [innerHTML]="item.title.rendered" text-left text-wrap></h2>
           </ion-card-title>
 
-          <p>{{item.excerpt.rendered | slice:0:100 }}...</p>
+          <p>{{item.excerpt.rendered | slice:0:80 }}...</p>
          
           <p text-right>{{item.date | date}}</p>
       </ion-card-content>

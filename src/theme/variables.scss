@@ -24,7 +24,6 @@ $app-direction: ltr;
 
 
 
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -40,10 +39,10 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222,
   info-nerd: #009688,
-  info-nerd-dark: #505050,
+  info-nerd-dark: #505050
 );
 
-$background-color: #2A3132;
+$background-color: grey;
 $card-background-color: white;
 // App iOS Variables
 // --------------------------------------------------

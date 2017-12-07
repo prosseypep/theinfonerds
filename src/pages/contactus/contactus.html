@@ -1,0 +1,53 @@
+<!--
+  Generated template for the ContactusPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="info-nerd-dark" >
+  	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contact Us</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div>
+		<h4>We love your feedback. We love to hear from you. We love to know how you feel about our contents</h4>
+		<h4>If you have any blogging suggestions, queries or you just want to say hello to us, Do contact us on:</h4>
+		<h5>Email: contact@theinfonerds.com</h5>
+		<h5>theinfonerds@gmail.com</h5>
+		<h5>Mobile: +2348067936240</h5>
+		<h5>BBM: D8B34138</h5>
+		<h4>Or you can kindly feel out the form below:</h4>
+	</div>
+
+	<ion-list>
+		<ion-item>
+			<ion-label color="primary" fixed>Name</ion-label>
+			<ion-input type="text"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label color="primary" fixed>Email</ion-label>
+			<ion-input type="text"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label color="primary" fixed>Subject</ion-label>
+			<ion-input type="text"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-label color="primary" fixed>Website</ion-label>
+			<ion-input type="text"></ion-input>
+		</ion-item>
+		<ion-item>
+			<ion-textarea placeholder="Your Message..."></ion-textarea>
+		</ion-item>
+		<button ion-button (click)="SubmitData()">Submit</button>
+	</ion-list>
+		
+</ion-content>

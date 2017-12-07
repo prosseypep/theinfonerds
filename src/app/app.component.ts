@@ -11,9 +11,14 @@ import { VideosPage } from '../pages/videos/videos';
 import { SportsPage } from '../pages/sports/sports';
 import { EventsPage } from '../pages/events/events';
 import { EditorialsPage } from '../pages/editorials/editorials';
-import { HealthPage } from '../pages/health/health';
 import { FashionPage } from '../pages/fashion/fashion';
-
+import { MovietalkPage } from '../pages/movietalk/movietalk';
+import { InterviewsPage } from '../pages/interviews/interviews';
+import { LyricsPage } from '../pages/lyrics/lyrics';
+import { RelationshipPage } from '../pages/relationship/relationship';
+import { StoriesPage } from '../pages/stories/stories';
+import { ContactusPage } from '../pages/contactus/contactus';
+import { AboutusPage } from '../pages/aboutus/aboutus';
 
 
 @Component({
@@ -25,21 +30,28 @@ export class MyApp {
 
   rootPage:any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any, icon: any }>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Entertainment Gists', component: EntertainmentGistsPage},
-      { title: 'News', component: NewsPage },
-      { title: 'Music', component: MusicPage },
-      { title: 'Videos', component: VideosPage },
-      { title: 'Sports', component: SportsPage },
-      { title: 'Events', component: EventsPage },
-      { title: 'Editorials', component: EditorialsPage },
-      { title: 'Health', component: HealthPage },
-      { title: 'Fashion', component: FashionPage }
+      { title: 'Home News', component: HomePage, icon: 'home' },
+      { title: 'Entertainment Gists', component: EntertainmentGistsPage, icon: 'recording' },
+      { title: 'News', component: NewsPage, icon: 'globe' },
+      { title: 'Music', component: MusicPage, icon: 'musical-notes' },
+      { title: 'Videos', component: VideosPage, icon: 'videocam' },
+      { title: 'Sports', component: SportsPage, icon: 'football' },
+      { title: 'Events', component: EventsPage, icon: 'calender' },
+      { title: 'Editorials', component: EditorialsPage, icon: 'clipboard' },
+      { title: 'Fashion', component: FashionPage, icon: 'shirt'},
+      { title: 'Movie Talk', component: MovietalkPage, icon: 'videocam' },
+      { title: 'Interviews', component: InterviewsPage, icon:'microphone' },
+      { title: 'Lyrics', component: LyricsPage, icon: 'musical-note' },
+      { title: 'Relationship & Romance', component: RelationshipPage, icon: 'rose' },
+      { title: 'Stories', component: StoriesPage, icon: 'camera' },
+      { title: 'About Us', component: AboutusPage, icon: 'at'},
+      { title: 'Contact Us', component: ContactusPage, icon: 'contacts'}
     ]; 
+
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

@@ -15,7 +15,10 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 .card-item {
-		background-color: $card-background-color;
+	background-color: $card-background-color;
+}
+.menu-list {
+	color: white;
 }
 
 .post-body {
