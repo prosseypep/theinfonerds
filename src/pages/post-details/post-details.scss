@@ -26,6 +26,8 @@ page-post-details {
 	
 	#relatedPosts {
 		margin-top:	30px;
+		margin-left: 15px;
+		margin-right: 10px;
 	}
 	
 	.relatedPost {
@@ -37,7 +39,15 @@ page-post-details {
 		background-clip: content-box;
 	}
 	
-	.share {
+	.twishare {
+		background: #00B6F1;
+	}
+
+	.fbshare {
+		background: #3B5998;
+	}
+
+	.watshare {
 		background: #00FF7F;
 	}
 	
@@ -48,5 +58,9 @@ page-post-details {
 	.Rtitle {
 		padding-top: 20px;
 	}	
+
+	.backButton {
+		border-radius: 100%;
+	}
 }
 

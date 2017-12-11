@@ -39,11 +39,13 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222,
   info-nerd: #009688,
-  info-nerd-dark: #505050
+  info-nerd-dark: black
 );
 
-$background-color: grey;
+$background-color: black;
 $card-background-color: white;
+$text-color-main: white;
+
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

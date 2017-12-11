@@ -34,13 +34,13 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     this.pages = [
-      { title: 'Home News', component: HomePage, icon: 'home' },
-      { title: 'Entertainment Gists', component: EntertainmentGistsPage, icon: 'recording' },
+      { title: 'Home', component: HomePage, icon: 'home' },
+      { title: 'Entertainment', component: EntertainmentGistsPage, icon: 'recording' },
       { title: 'News', component: NewsPage, icon: 'globe' },
       { title: 'Music', component: MusicPage, icon: 'musical-notes' },
       { title: 'Videos', component: VideosPage, icon: 'videocam' },
       { title: 'Sports', component: SportsPage, icon: 'football' },
-      { title: 'Events', component: EventsPage, icon: 'calender' },
+      { title: 'Events', component: EventsPage, icon: 'browsers' },
       { title: 'Editorials', component: EditorialsPage, icon: 'clipboard' },
       { title: 'Fashion', component: FashionPage, icon: 'shirt'},
       { title: 'Movie Talk', component: MovietalkPage, icon: 'videocam' },
